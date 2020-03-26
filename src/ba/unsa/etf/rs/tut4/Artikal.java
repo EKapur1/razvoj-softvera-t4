@@ -9,12 +9,15 @@ public class Artikal {
 
     public Artikal(String s) {
        String[] str = s.split(",");
-       sifra = str[0];
-       naziv = str[1];
-       cijena = Double.parseDouble(str[2]);
+       setSifra(str[0]);
+       setNaziv(str[1]);
+       setCijena(Double.parseDouble(str[2]));
     }
 
     public Artikal(String sifra, String naziv, double cijena) {
+        if(cijena < 0) throw new IllegalArgumentException("Cijena je negativna");
+        if(sifra.equals("")) throw new IllegalArgumentException("Sifra je prazna");
+        if(naziv.equals("")) throw new IllegalArgumentException ("Naziv je prazan");
         this.sifra = sifra;
         this.naziv = naziv;
         this.cijena = cijena;
@@ -36,6 +39,7 @@ public class Artikal {
     }
 
     public void setSifra(String sifra) {
+        if(sifra.equals("")) throw new IllegalArgumentException("Sifra je prazna");
         this.sifra = sifra;
     }
 
@@ -44,6 +48,7 @@ public class Artikal {
     }
 
     public void setNaziv(String naziv) {
+        if(naziv.equals("")) throw new IllegalArgumentException ("Naziv je prazan");
         this.naziv = naziv;
     }
 
@@ -52,6 +57,7 @@ public class Artikal {
     }
 
     public void setCijena(double cijena) {
+        if(cijena < 0) throw new IllegalArgumentException("Cijena je negativna");
         this.cijena = cijena;
     }
 
@@ -60,5 +66,13 @@ public class Artikal {
         return sifra + "," + naziv + "," + cijena;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        Artikal a = (Artikal) o;
+        return sifra.equals(a.sifra) && naziv.equals(a.naziv) &&
+                cijena == a.cijena;
+    }
 
-}
+
+
+    }
