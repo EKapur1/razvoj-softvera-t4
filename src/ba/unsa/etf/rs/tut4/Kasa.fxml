@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
+  <tabs>
+    <Tab text="Artikli">
+      <content>
+          <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <TextArea fx:id="unesiArtikle" prefHeight="100.0" prefWidth="220.0">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin></TextArea>
+                  <Button fx:id="dugmeDodaj" mnemonicParsing="false" onAction="#izbaci" text="Dodaj artikle" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Button>
+                  <TextArea fx:id="ispisiArtikle" editable="false" prefHeight="100.0" prefWidth="220.0" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin></TextArea>
+               </children></GridPane>
+      </content>
+    </Tab>
+    <Tab text="Račun">
+      <content>
+          <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+
+          </GridPane>
+      </content>
+    </Tab>
+  </tabs>
+   <padding>
+      <Insets left="3.0" right="3.0" />
+   </padding>
+</TabPane>
