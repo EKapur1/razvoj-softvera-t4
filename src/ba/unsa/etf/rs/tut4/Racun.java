@@ -3,7 +3,8 @@ package ba.unsa.etf.rs.tut4;
 import java.util.ArrayList;
 
 public class Racun {
-    private class Stavka{
+
+    private static class Stavka{
         private Artikal artikal;
         private int kolicina;
 
@@ -29,13 +30,15 @@ public class Racun {
         }
     }
 
+
+
     private ArrayList<Stavka> stavke = new ArrayList<>();
     public Racun() {
         this.stavke = new ArrayList<>();
     }
 
     public void dodajStavku(Artikal artikal, int kolicina){
-        Stavka stavka = new Stavka(artikal,kolicina);
+        Stavka stavka = new Stavka(artikal, kolicina);
         stavke.add(stavka);
     }
 

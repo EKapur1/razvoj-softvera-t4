@@ -51,7 +51,7 @@
                      <GridPane.margin>
                         <Insets left="10.0" top="5.0" />
                      </GridPane.margin></Label>
-                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1">
+                  <ChoiceBox fx:id="liste" prefWidth="150.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets top="5.0" />
                      </GridPane.margin></ChoiceBox>
@@ -60,7 +60,7 @@
                         <Insets left="10.0" />
                      </GridPane.margin></Label>
                   <Spinner GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Aktuelni račun:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets bottom="100.0" left="10.0" />
