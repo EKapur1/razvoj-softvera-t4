@@ -1,6 +1,5 @@
 package ba.unsa.etf.rs.tut4;
 
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
@@ -13,7 +12,7 @@ public class Controller {
     public Button dugmeDodaj;
     public TextArea ispisiArtikle;
 
-    public void izbaci(ActionEvent actionEvent) {
+    public void izbaci() {
         ArrayList<Artikal> lista = new ArrayList<>();
             String[] s = unesiArtikle.getText().split("\n");
             for(int i = 0; i < s.length; i++){
