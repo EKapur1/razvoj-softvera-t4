@@ -13,11 +13,13 @@ public class Racun {
     public void dodajStavku(Artikal artikal, int kolicina) {
         if (stavke.isEmpty()) {
             stavke.add(new Stavka(artikal, kolicina));
-        } else {
+        }
+        else {
             for (int i = 0; i < stavke.size(); i++) {
                 if (stavke.get(i).getArtikal().getSifra().equals(artikal.getSifra())) {
                     stavke.set(i, new Stavka(artikal, stavke.get(i).getKolicina() + kolicina));
-                } else if (i == stavke.size() - 1) {
+                }
+                else if (i == stavke.size() - 1) {
                     //Ako se ne nalazi dodaj novi par
                     stavke.add(new Stavka(artikal, kolicina));
                     break;
@@ -36,7 +38,7 @@ public class Racun {
     }
 
     public ArrayList<Stavka> getStavke() {
-        return stavke;
+        return this.stavke;
     }
 
     public void setStavke(ArrayList<Stavka> stavke) {
@@ -47,9 +49,9 @@ public class Racun {
     public String toString() {
         StringBuilder output = new StringBuilder();
         for (Stavka stavka : stavke) {
-            output.append(stavka.getArtikal().getSifra()).append(" ").append(stavka.getArtikal().getCijena() * stavka.getKolicina()).append("\n");
+            output.append(stavka.getArtikal().getSifra()).append("   ").append(stavka.getArtikal().getCijena() * stavka.getKolicina()).append("\n");
         }
-        output.append("Ukupan iznos: ").append(ukupanIznos());
+        output.append("UKUPNO    ").append(ukupanIznos());
         return output.toString();
     }
 

@@ -63,7 +63,8 @@ public class Artikal {
 
     @Override
     public String toString() {
-        return sifra + "," + naziv + "," + cijena;
+        String s = sifra + "," + naziv + "," + cijena;
+        return s;
     }
 
     @Override

@@ -148,4 +148,11 @@ class ArtikalTest {
         Artikal a = new Artikal("ABC", "Proizvod", 100);
         assertEquals("ABC,Proizvod,100.0", a.toString());
     }
+
+    @Test
+    void konstruktorArtikal(){
+        Artikal a = new Artikal("ABC,Proizvod,100");
+
+        assertEquals("ABC,Proizvod,100.0",a.toString());
+    }
 }
