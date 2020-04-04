@@ -39,6 +39,16 @@ class RacunTest {
     }
 
     @Test
+    void getStavke() {
+        Racun r = new Racun();
+        assertEquals(r.getStavke().size(), 0);
+    }
+
+    @Test
+    void setStavke() {
+    }
+
+    @Test
     void testToString() {
         Racun r = new Racun();
         assertEquals("UKUPNO    0.0", r.toString());
