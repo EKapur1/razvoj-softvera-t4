@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArtikalTest {
 
+
+
     @Test
     void getSifra() {
         Artikal a = new Artikal("ABC", "Proizvod", 100);
@@ -139,5 +141,11 @@ class ArtikalTest {
         assertTrue(lista.contains(new Artikal("DEF", "Usluga", 200)));
         assertFalse(lista.contains(new Artikal("ABC", "Usluga", 100)));
         assertFalse(lista.contains(new Artikal("DEF", "Usluga", 100)));
+    }
+
+    @Test
+    void testToString() {
+        Artikal a = new Artikal("ABC", "Proizvod", 100);
+        assertEquals("ABC,Proizvod,100.0", a.toString());
     }
 }

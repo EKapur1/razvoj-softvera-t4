@@ -3,7 +3,6 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Spinner?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
   <tabs>
@@ -60,17 +59,17 @@
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin></Label>
-                  <Spinner fx:id="spin"  editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Spinner fx:id="spin" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                       <valueFactory>
-                          <SpinnerValueFactory.IntegerSpinnerValueFactory min="0" max="10"/>
+                          <SpinnerValueFactory.IntegerSpinnerValueFactory max="10" min="0" />
                       </valueFactory>
                   </Spinner>
-                  <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="dodaj" onAction="#racun" mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Aktuelni račun:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets bottom="100.0" left="10.0" />
                      </GridPane.margin></Label>
-                  <TextArea maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <TextArea fx:id="ispisiRacun" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets bottom="80.0" right="50.0" />
                      </GridPane.margin></TextArea>
