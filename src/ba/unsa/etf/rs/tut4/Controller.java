@@ -15,7 +15,6 @@ import static ba.unsa.etf.rs.tut4.Artikal.izbaciDuplikate;
 
 
 
-//Dodas ovo implements Initalizable i alt-enter da dodas initalize metodu automatski
 public class Controller implements Initializable {
     public TextArea unesiArtikle;
     public Button dugmeDodaj;
@@ -25,20 +24,18 @@ public class Controller implements Initializable {
     public Button dodaj;
     public TextArea ispisiRacun;
     Racun racun;
-    public ArrayList<Artikal> artikli; // Lista globalnih artikala
+    public ArrayList<Artikal> artikli;
 
-    //Initialize metoda se poziva sama prije svih ostalih ali poslije konstruktora
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Koristi se lista artikala da bi mogli uzeti cijenu
+
         artikli = new ArrayList<>();
         racun = new Racun();
     }
 
 
-    //Metoda za dodavanje
     public void racun(ActionEvent actionEvent) {
-        //Prolaz kroz sve dodane artikle
+
         for (Artikal a : artikli) {
             if (liste.getSelectionModel().getSelectedItem().equals(a.getSifra())) {
                 racun.dodajStavku(a, spin.getValue());
@@ -58,7 +55,6 @@ public class Controller implements Initializable {
         izbaciDuplikate(lista);
 
 
-        //Dodaj nove artikle u niz artikala
         artikli.addAll(lista);
 
         StringBuilder novi = new StringBuilder();
